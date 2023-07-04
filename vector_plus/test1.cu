@@ -32,7 +32,7 @@ int main(){
     LARGE_INTEGER frequency,start,end;
     double period_gpu,period_cpu;
 
-    const int N = 100000;
+    const int N = 100000000;
     const int M = sizeof(double) * N;
 
 //memory allocation
@@ -87,7 +87,7 @@ int main(){
         }
     }
     printf("Result:%s\n",error?"Errors":"Pass");
-    printf("running time:GPU is %fs,while CPU is %fs",period_gpu,period_cpu);
+    printf("running time:GPU is %fms,while CPU is %fms",period_gpu,period_cpu);
 
     free(h_x);
     free(h_y);
